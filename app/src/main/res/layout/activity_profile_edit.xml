@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgray"
+    tools:context=".activities.ProfileEditActivity">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:background="@drawable/backeditprofile"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_back_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"/>
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:text="Chỉnh sửa Profile"
+            android:textColor="#ece75f"
+            android:textSize="28sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileTv"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:layout_marginTop="100dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_person_gray"
+            app:shapeAppearance="@style/styleRoundeCornersImage" />
+        <ImageButton
+            android:id="@+id/removeBtn"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_del_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="270dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameTil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false">
+            <EditText
+                android:id="@+id/nameEd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext01"
+                android:drawableStart="@drawable/ic_person_gray"
+                android:drawablePadding="10dp"
+                android:hint="Họ và tên"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray01"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/updateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTil"
+            android:background="@drawable/shape_button01"
+            android:text="Cập nhật"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"/>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/editPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Đổi mật khẩu"
+        android:textSize="16dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/green"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="10dp"/>
+</RelativeLayout>

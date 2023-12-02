@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    tools:context=".activities.DashboardAdminActivity">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar02">
+        <ImageButton
+            android:id="@+id/profileBtn"
+            android:src="@drawable/ic_person_white"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:text="Xin chào"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_below="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:text="abc@gmail.com"
+            android:textColor="@color/white"/>
+        <ImageButton
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_logout_white"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"/>
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/searchEd"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search"
+        android:drawableStart="@drawable/ic_search_gray"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:textColorHint="@color/gray01" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/botlayout"
+        android:layout_below="@+id/searchEd"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/cate_item" />
+
+    <LinearLayout
+        android:id="@+id/botlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addCate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_button01"
+            android:text="Thêm mục sách"
+            android:textColor="@color/white"
+            android:textAllCaps="false"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addPdfFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_pdf_white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:fabCustomSize="50dp"
+            app:tint="@color/white"
+            app:backgroundTint="@color/teal" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/editUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_people_white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:fabCustomSize="50dp"
+            app:tint="@color/white"
+            app:backgroundTint="@color/teal" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/changeViewBtn"
+            android:text="Đổi góc nhìn"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/ic_change_white"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_button01" />
+
+    </LinearLayout>
+
+</RelativeLayout>
